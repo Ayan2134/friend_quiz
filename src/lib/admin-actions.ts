@@ -56,7 +56,7 @@ export async function adminLogin(password: string): Promise<AdminLoginResult> {
 export async function adminLogout() {
   const jar = await cookies();
   jar.delete(ADMIN_COOKIE);
-  redirect("/admin");
+  redirect("/ops");
 }
 
 export type AdminStats = {
