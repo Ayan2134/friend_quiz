@@ -32,9 +32,11 @@ export default async function DashboardPage({ params, searchParams }: Props) {
           <p className="text-[var(--ink-muted)]">
             Open your private dashboard URL (the one with the token) to see who played.
           </p>
-          <Link href="/" className="btn-primary inline-flex">
-            Back home
-          </Link>
+          <div className="btn-row">
+            <Link href="/" className="btn-primary">
+              Back home
+            </Link>
+          </div>
         </div>
       </main>
     );

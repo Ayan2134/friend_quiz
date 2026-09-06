@@ -137,7 +137,7 @@ export function CreateQuizForm() {
               {copied === "link" ? "Copied" : "Copy link"}
             </button>
           </div>
-          <div className="mt-4 flex flex-wrap gap-3">
+          <div className="btn-row mt-4">
             <a
               className="btn-secondary"
               href={`https://wa.me/?text=${waText}`}
@@ -171,13 +171,15 @@ export function CreateQuizForm() {
               {copied === "dash" ? "Copied" : "Copy dashboard"}
             </button>
           </div>
-          <button
-            type="button"
-            className="btn-primary mt-4"
-            onClick={() => router.push(dashUrl)}
-          >
-            Open dashboard
-          </button>
+          <div className="btn-row mt-4">
+            <button
+              type="button"
+              className="btn-primary"
+              onClick={() => router.push(dashUrl)}
+            >
+              Open dashboard
+            </button>
+          </div>
         </div>
       </div>
     );
@@ -210,9 +212,11 @@ export function CreateQuizForm() {
           ))}
         </div>
 
-        <button type="button" className="btn-primary" onClick={() => setStep("edit")}>
-          Continue with {pack.name}
-        </button>
+        <div className="btn-row">
+          <button type="button" className="btn-primary" onClick={() => setStep("edit")}>
+            Continue with {pack.name}
+          </button>
+        </div>
       </div>
     );
   }
@@ -312,7 +316,7 @@ export function CreateQuizForm() {
 
       {error ? <p className="error-text">{error}</p> : null}
 
-      <div className="flex flex-wrap gap-3">
+      <div className="btn-row">
         <button type="button" className="btn-ghost" onClick={() => setStep("pack")}>
           Back
         </button>

@@ -29,7 +29,7 @@ export function ShareBar({ slug, title, creatorName }: Props) {
   }
 
   return (
-    <div className="flex flex-wrap gap-3">
+    <div className="btn-row">
       <button type="button" className="btn-secondary" onClick={copy}>
         {copied ? "Copied" : "Copy link"}
       </button>

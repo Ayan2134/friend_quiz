@@ -97,9 +97,11 @@ export function TakeQuizForm({ slug, creatorName, title, questions }: Props) {
           />
         </div>
         {error ? <p className="error-text">{error}</p> : null}
-        <button type="button" className="btn-primary" onClick={start}>
-          Start quiz
-        </button>
+        <div className="btn-row">
+          <button type="button" className="btn-primary" onClick={start}>
+            Start quiz
+          </button>
+        </div>
       </div>
     );
   }
@@ -134,7 +136,7 @@ export function TakeQuizForm({ slug, creatorName, title, questions }: Props) {
 
       {error ? <p className="error-text">{error}</p> : null}
 
-      <div className="flex flex-wrap gap-3">
+      <div className="btn-row">
         {index > 0 ? (
           <button
             type="button"

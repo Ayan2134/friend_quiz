@@ -13,9 +13,11 @@ export default function NotFound() {
         <p className="text-[var(--ink-muted)]">
           That quiz link doesn&apos;t exist — or it wandered off.
         </p>
-        <Link href="/create" className="btn-primary inline-flex">
-          Make your own
-        </Link>
+        <div className="btn-row">
+          <Link href="/create" className="btn-primary">
+            Make your own
+          </Link>
+        </div>
       </div>
     </main>
   );

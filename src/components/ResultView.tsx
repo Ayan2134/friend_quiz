@@ -114,7 +114,7 @@ export function ResultView({
         <p className="mt-1 text-sm text-[var(--ink-muted)]">
           Tag who would fail this. Only real friends clear 80%.
         </p>
-        <div className="mt-4 flex flex-wrap gap-3">
+        <div className="btn-row mt-4">
           <button type="button" className="btn-primary" onClick={share}>
             {copied ? "Copied" : "Share result"}
           </button>
@@ -185,9 +185,11 @@ export function ResultView({
         <p className="mt-2 max-w-md text-[var(--ink-muted)]">
           Turn the tables. Create a quiz about yourself and challenge the group chat.
         </p>
-        <Link href="/create" className="btn-primary mt-5 inline-flex">
-          Create your quiz
-        </Link>
+        <div className="btn-row mt-5">
+          <Link href="/create" className="btn-primary">
+            Create your quiz
+          </Link>
+        </div>
       </section>
     </div>
   );
